@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "305938919574",
+    "project_id": "tekgitme-f9cae",
+    "storage_bucket": "tekgitme-f9cae.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:305938919574:android:c70b5f2c4519c18f4412b7",
+        "android_client_info": {
+          "package_name": "com.ruchanokal.tekgitme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "305938919574-3m622ke2o4ajpdq3fs6s0uho7aqnbkl9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAX0QQWH_uW9cdetiCOAU_K3t6Iphhm0IE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "305938919574-3m622ke2o4ajpdq3fs6s0uho7aqnbkl9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

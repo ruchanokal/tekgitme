@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.MainFragment">
+
+
+
+    <TextView
+        android:id="@+id/kullaniciAdiTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="12dp"
+        android:text="kullanici"
+        android:background="@drawable/borderkullanici"
+        android:padding="6dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:layout_centerVertical="true"
+        android:textColor="#000000"
+        android:textSize="17sp" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/kullaniciAdiTextView"
+        android:id="@+id/recyclerViewList"/>
+
+
+    <ImageView
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="12dp"
+        android:id="@+id/signOutButton"
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/power" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/newDestinationFAB"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="20dp"
+        app:backgroundTint="#FDB813"
+        android:backgroundTint="#FDB813"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/ic_add_24"/>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:background="@color/black"
+        android:id="@+id/adminOnayiLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bekleniyorTextView"
+            android:textColor="#FDB813"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_above="@id/progressBarAdmin"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Adminin onaylaması bekleniyor..."/>
+
+
+        <ProgressBar
+            android:visibility="visible"
+            android:id="@+id/progressBarAdmin"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:indeterminate="true"
+            android:layout_centerInParent="true"
+            android:indeterminateTint="#FDB813" />
+
+
+    </RelativeLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/border_dialog"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <TextView
+        android:id="@+id/guzergahOlusturTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentTop="true"
+        android:text="Yeni Yolculuk"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/montserrat_bold"
+        android:textColor="#C89635"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="7dp"
+        android:id="@+id/neredenText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/guzergahOlusturTextView"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center"
+        android:text="Nereden"
+        android:layout_centerHorizontal="true"
+        android:textColor="#C89635"
+        android:textSize="18sp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nereden"
+        android:layout_below="@id/neredenText"
+        android:id="@+id/exposedNeredenMenu"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="5dp">
+
+
+        <AutoCompleteTextView
+            android:id="@+id/neredenACTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            android:text="Taksi Durağı Seçiniz" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="7dp"
+        android:id="@+id/nereyeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center"
+        android:text="Nereye"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/exposedNeredenMenu"
+        android:textColor="#C89635"
+        android:textSize="18sp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nereye"
+        android:layout_below="@id/nereyeText"
+        android:id="@+id/exposedNereyeMenu"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="5dp">
+
+
+        <AutoCompleteTextView
+            android:id="@+id/nereyeACTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            android:text="İlçe Seçiniz" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Detay belirtiniz"
+        android:layout_below="@id/exposedNereyeMenu"
+        app:helperText="* Meydan, hastane gibi detay belirtebilirsiniz."
+        app:helperTextTextColor="#1047A6"
+        android:id="@+id/textInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="5dp">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/saat"
+        android:layout_below="@id/textInputLayout"
+        android:layout_gravity="start"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Saat Seçiniz" />
+
+    <LinearLayout
+        android:id="@+id/saatDakikaLayout"
+        android:layout_below="@id/saat"
+        android:layout_gravity="start"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="5dp"
+        android:paddingHorizontal="10dp"
+        android:background="@drawable/bordereposta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="00"
+            android:maxLength="2"
+            android:inputType="number"
+            android:id="@+id/saatEditText"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="00"
+            android:maxLength="2"
+            android:layout_marginStart="10dp"
+            android:inputType="number"
+            android:id="@+id/dakikaEditText"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@id/saatDakikaLayout"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/tamam_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_gravity="center_horizontal"
+            android:text="Tamam"
+            android:minHeight="0dp"
+            android:paddingVertical="13dp"
+            android:textColor="@color/white"
+            android:id="@+id/tamamButton"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/iptal_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_gravity="center_horizontal"
+            android:text="İptal"
+            android:minHeight="0dp"
+            android:paddingVertical="13dp"
+            android:textColor="@color/white"
+            android:id="@+id/iptalButton"/>
+
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>
